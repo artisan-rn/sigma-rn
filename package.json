@@ -2,12 +2,17 @@
   "name": "@sigma/rn",
   "version": "0.0.1",
   "private": true,
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "clean": "rm -rf lib",
+    "tsc:src": "npm run clean && tsc -p ./src",
+    "prepublishOnly": "npm run tsc:src"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
