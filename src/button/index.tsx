@@ -1,39 +1,39 @@
 import * as React from 'react';
-import {TouchableHighlight, View, Text} from 'react-native';
+import {View, Text, TouchableWithoutFeedback} from 'react-native';
 import styles from './style';
 export interface ButtonProps {
   disabled?: boolean;
-  size: 'large' | 'small';
-  circle: boolean;
-  type: 'primary' | 'ghost' | 'default' | 'fill' | 'light' | 'block' | 'pink';
+  block?: boolean;
+  size: 'lg' | 'md' | 'sm' | 'xs';
+  type: 'primary' | 'ghost' | 'default' | 'fill';
 }
 
 export default class Button extends React.Component<ButtonProps> {
   static defaultProps = {
-    size: 'large',
+    size: 'sm',
     type: 'primary',
   };
 
   render(): React.ReactNode {
-    const {children, disabled, size, type, circle, ...other} = this.props;
+    const {children, disabled, size, type, block, ...other} = this.props;
 
     const wrapStyle = [
       styles.container,
 
-      styles[`${circle ? 'small' : size}Container`],
-      styles[`${type}Container`],
-      circle && styles.circleContainer,
-      disabled && styles.disabledContainer,
+      styles[`${size}`],
+      styles[`${type}`],
+      block && styles.block,
+      disabled && styles.disabled,
     ];
 
     const textStyle = [
-      styles.textStyle,
-      circle && styles.circleText,
+      styles.text,
+      //styles.circleText,
       styles[`${type}Text`],
     ];
 
     return (
-      <TouchableHighlight {...other} underlayColor={null}>
+      <TouchableWithoutFeedback {...other}>
         <View style={wrapStyle}>
           {typeof children === 'string' ? (
             <Text style={textStyle}>{children}</Text>
@@ -41,7 +41,7 @@ export default class Button extends React.Component<ButtonProps> {
             children
           )}
         </View>
-      </TouchableHighlight>
+      </TouchableWithoutFeedback>
     );
   }
 }

@@ -15,26 +15,23 @@ const Device = {
   width,
   height,
   dpr,
-
-  /**
-   * 基于750屏幕宽度(iphone6)，按比例转换px
-   */
-  getRpx(value:number) {
-    return Math.floor(value * ratioDeps750);
-  },
-
-  /**
-   * 基于dpr获取px
-   */
-  getDpx(value:number) {
-    return value / this.dpr;
-  },
-
-  /**
-   * 基于750屏幕宽度(iphone6)，计算字体大小
-   */
-  getFontSize(value:number) {
-    return value / 2;
-  },
 };
 export default Device;
+
+export function getRpx(value: number) {
+  return Math.floor(value * ratioDeps750);
+}
+
+/**
+ * 基于dpr获取px
+ */
+export function getDpx(value: number) {
+  return value / dpr;
+}
+
+/**
+ * 基于750屏幕宽度(iphone6)，计算字体大小
+ */
+export function getFontSize(value: number) {
+  return value / 2;
+}
