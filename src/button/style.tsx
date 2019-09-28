@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {getRpx} from '../utils/Device';
+import {getRpx} from '@sigma/rn-util/lib/Device';
 import variables from '../style/variables';
 
 const styles = StyleSheet.create({
@@ -45,8 +45,17 @@ const styles = StyleSheet.create({
     backgroundColor: variables.fillGrey,
   },
 
-  lgTextStyle: {
+  lgText: {
     fontSize: getRpx(30),
+  },
+  mdText: {
+    fontSize: getRpx(30),
+  },
+  smText: {
+    fontSize: getRpx(24),
+  },
+  xsText: {
+    fontSize: getRpx(20),
   },
   defaultText: {
     color: '#2e2d2d',
@@ -56,11 +65,9 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#2e2d2d',
-    fontSize: getRpx(26),
   },
   primaryText: {
     color: '#FFFFFF',
-    fontSize: getRpx(26),
   },
 });
 

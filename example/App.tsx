@@ -10,8 +10,8 @@ import {
 } from 'react-native';
 import {routers} from './routers';
 
-const {width} = Dimensions.get('window');
-
+import Device from '@sigma/rn-util/lib/Device';
+const {width} = Device;
 const COLORS = [
   '#FF4777',
   '#725E82',
@@ -23,7 +23,6 @@ const COLORS = [
 ];
 
 export default class App extends Component {
-
   static navigationOptions = {
     title: 'react-native组件库',
   };

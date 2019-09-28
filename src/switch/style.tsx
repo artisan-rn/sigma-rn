@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {getDpx, getRpx} from '../utils/Device';
+import {getDpx, getRpx} from '@sigma/rn-util/lib/Device';
 
 const styles = StyleSheet.create({
   wrapper: {

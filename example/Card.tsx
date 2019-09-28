@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {StyleSheet, Text, View, ViewStyle} from 'react-native';
-import {getDpx, getRpx} from '../src/utils/Device';
+import {getDpx, getRpx} from '@sigma/rn-util/lib/Device';
 
 export interface CardProps {
   title: string;

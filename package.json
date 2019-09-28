@@ -1,7 +1,7 @@
 {
   "name": "@sigma/rn",
-  "version": "0.0.1",
-  "private": true,
+  "version": "0.0.2",
+  "private": false,
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -12,7 +12,13 @@
     "lint": "eslint .",
     "clean": "rm -rf lib",
     "tsc:src": "npm run clean && tsc -p ./src",
-    "prepublishOnly": "npm run tsc:src"
+    "prepublishOnly": "npm run tsc:src",
+    "pub:local": "npm publish --registry http://0.0.0.0:4873",
+    "pub": "npm publish",
+    "expo-demo-deploy": "gh-pages -d example -r https://github.com/zhhyang/sigma-expo.git -b master -e example"
+  },
+  "dependencies": {
+    "@sigma/rn-util": "^0.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
@@ -24,6 +30,7 @@
     "@types/react-navigation": "^3.0.8",
     "@types/react-test-renderer": "^16.9.0",
     "babel-jest": "^24.9.0",
+    "babel-plugin-module-resolver": "^3.2.0",
     "eslint": "^6.3.0",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
@@ -33,7 +40,8 @@
     "react-navigation": "^4.0.8",
     "react-navigation-stack": "^1.9.0",
     "react-test-renderer": "16.8.6",
-    "typescript": "^3.6.3"
+    "typescript": "^3.6.3",
+    "gh-pages": "~2.0.1"
   },
   "peerDependencies": {
     "react": "16.8.6",
