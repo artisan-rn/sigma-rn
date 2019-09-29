@@ -10,10 +10,10 @@ import styles from './style';
 export interface ButtonProps {
   disabled?: boolean;
   block?: boolean;
-  size: 'lg' | 'md' | 'sm' | 'xs';
-  type: 'primary' | 'ghost' | 'default' | 'fill';
-  style: ViewStyle;
-  textStyle: TextStyle;
+  size?: 'lg' | 'md' | 'sm' | 'xs';
+  type?: 'primary' | 'ghost' | 'default' | 'fill';
+  style?: ViewStyle;
+  textStyle?: TextStyle;
 }
 
 export default class Button extends React.Component<ButtonProps> {
