@@ -1,39 +1,42 @@
 import {StyleSheet} from 'react-native';
-import {getDpx, getRpx} from '@sigma/rn-util/lib/Device';
+import {getRpx} from '@sigma/rn-util/lib/Device';
+import variables from '../style/variables';
 
 const styles = StyleSheet.create({
   wrapper: {
-    borderRadius: 300,
-    borderColor: '#DADADA',
-    borderWidth: getDpx(3),
-    backgroundColor: '#FFF',
     flexDirection: 'row',
     alignItems: 'center',
-    width: getRpx(96),
+    justifyContent: 'center',
+    width: getRpx(108),
     height: getRpx(48),
-  },
-  left: {
-    justifyContent: 'flex-start',
-    paddingLeft: getRpx(8),
-  },
-  right: {
-    justifyContent: 'flex-end',
-    borderColor: '#f0250f',
-    paddingRight: getRpx(8),
   },
   disabled: {
     opacity: 0.3,
   },
-  dot: {
-    borderRadius: 300,
-    backgroundColor: '#DADADA',
-    borderWidth: getDpx(1),
-    borderColor: '#DDD',
-    width: getRpx(30),
-    height: getRpx(30),
+  inner: {
+    width: getRpx(84),
+    height: getRpx(36),
+    borderRadius: getRpx(24),
+    backgroundColor: variables.lightGrey,
   },
-  dotActive: {
-    backgroundColor: '#f0250f',
+  innerChecked: {
+    backgroundColor: variables.brandPrimary,
+  },
+  dot: {
+    position: 'absolute',
+    top: 0,
+    backgroundColor: '#FFFFFF',
+    width: getRpx(48),
+    height: getRpx(48),
+    borderRadius: getRpx(48),
+    shadowColor: 'rgba(0, 0, 0, 0.1)',
+    shadowOffset: {
+      width: 0,
+      height: getRpx(4),
+    },
+    shadowRadius: getRpx(12),
+    shadowOpacity: 1,
+    left: 0,
   },
 });
 
