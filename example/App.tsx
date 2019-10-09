@@ -23,8 +23,10 @@ const COLORS = [
 ];
 
 export default class App extends Component {
+
   static navigationOptions = {
-    title: 'react-native组件库',
+    title: 'JD App 8.0 视觉规范 组件库',
+    headerBackTitle: '返回',
   };
 
   state = {
