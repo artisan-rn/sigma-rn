@@ -5,7 +5,7 @@ module.exports = {
       'module-resolver',
       {
         alias: {
-          '@sigma/rn': './src',
+          '@jdjoy/sigma-rn': './src',
         },
       },
     ],

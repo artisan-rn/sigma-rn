@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 import {
-  Text,
-  View,
   FlatList,
   Platform,
-  Dimensions,
   StyleSheet,
+  Text,
   TouchableOpacity,
+  View,
 } from 'react-native';
 import {routers} from './routers';
 
-import Device from '@sigma/rn-util/lib/Device';
+import Device from '@jdjoy/sigma-rn-util/lib/Device';
+
 const {width} = Device;
 const COLORS = [
   '#FF4777',

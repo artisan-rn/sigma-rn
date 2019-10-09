@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {StyleSheet, View} from 'react-native';
 // @ts-ignore
-import {Switch} from '@sigma/rn';
+import {Switch} from '@jdjoy/sigma-rn';
 import Card from '../Card';
 class Demo extends React.PureComponent {
   state = {

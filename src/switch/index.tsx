@@ -6,7 +6,7 @@ import {
   Animated,
 } from 'react-native';
 import styles from './style';
-import {getRpx} from '@sigma/rn-util/lib/Device';
+import {getRpx} from '@jdjoy/sigma-rn-util/lib/Device';
 export interface SwitchProps {
   disabled?: boolean;
   onChange: () => void;

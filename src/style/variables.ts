@@ -1,4 +1,4 @@
-import {getDpx, getRpx} from '@sigma/rn-util/lib/Device';
+import {getDpx, getRpx} from '@jdjoy/sigma-rn-util/lib/Device';
 
 const brandPrimary = '#F2270C'; //主站品牌用色，多用于常规商品价格、主要功能按钮、明示及促销活动提示灯
 

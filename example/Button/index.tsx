@@ -3,9 +3,9 @@ import React, {Component} from 'react';
 import {View, StyleSheet} from 'react-native';
 
 // @ts-ignore
-import {Button} from '@sigma/rn';
+import {Button} from '@jdjoy/sigma-rn';
 import Card from '../Card';
-import {getRpx} from '@sigma/rn-util/lib/Device';
+import {getRpx} from '@jdjoy/sigma-rn-util/lib/Device';
 
 export default class ButtonScreen extends Component {
   render() {

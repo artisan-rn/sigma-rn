@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {getRpx} from '@sigma/rn-util/lib/Device';
+import {getRpx} from '@jdjoy/sigma-rn-util/lib/Device';
 import variables from '../style/variables';
 
 const styles = StyleSheet.create({

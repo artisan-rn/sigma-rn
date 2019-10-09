@@ -1,6 +1,6 @@
 {
-  "name": "@sigma/rn",
-  "version": "0.0.2",
+  "name": "@jdjoy/sigma-rn",
+  "version": "0.0.1",
   "private": false,
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -18,7 +18,7 @@
     "expo-demo-deploy": "gh-pages -d example -r https://github.com/zhhyang/sigma-expo.git -b master -e example"
   },
   "dependencies": {
-    "@sigma/rn-util": "^0.0.1"
+    "@jdjoy/sigma-rn-util": "^0.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
