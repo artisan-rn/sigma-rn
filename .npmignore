@@ -39,7 +39,6 @@ example
 .watchmanconfig
 app.json
 babel.config.js
-index.js
 jest.config.js
 metro.config.js
 
