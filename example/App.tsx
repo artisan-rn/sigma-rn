@@ -23,7 +23,6 @@ const COLORS = [
 ];
 
 export default class App extends Component {
-
   static navigationOptions = {
     title: 'JD App 8.0 视觉规范 组件库',
     headerBackTitle: '返回',

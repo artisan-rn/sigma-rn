@@ -1,9 +1,14 @@
 import * as React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {View} from 'react-native';
 // @ts-ignore
 import {Switch} from '@jdjoy/sigma-rn';
 import Card from '../Card';
+
 class Demo extends React.PureComponent {
+  static navigationOptions = {
+    title: '开关',
+  };
+
   state = {
     value: false,
     value1: true,
@@ -27,7 +32,7 @@ class Demo extends React.PureComponent {
   };
   render() {
     return (
-      <View style={styles.container}>
+      <View>
         <Card title="开关-默认关闭" style={{flexDirection: 'row'}}>
           <Switch value={this.state.value} onChange={this.onChange} />
         </Card>
@@ -52,12 +57,5 @@ class Demo extends React.PureComponent {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    paddingHorizontal: 15,
-    paddingVertical: 7.5,
-  },
-});
 
 export default Demo;

@@ -1,16 +1,18 @@
-import React, {Component} from 'react';
+import * as React from 'react';
 
-import {View, StyleSheet} from 'react-native';
-
+import {View} from 'react-native';
 // @ts-ignore
 import {Button} from '@jdjoy/sigma-rn';
 import Card from '../Card';
 import {getRpx} from '@jdjoy/sigma-rn-util/lib/Device';
 
-export default class ButtonScreen extends Component {
+export default class ButtonScreen extends React.Component {
+  static navigationOptions = {
+    title: '按钮',
+  };
   render() {
     return (
-      <View style={styles.container}>
+      <View>
         <Card title="常规" style={{flexDirection: 'row'}}>
           <Button size="lg" style={{width: getRpx(240)}}>
             去结算
@@ -39,14 +41,3 @@ export default class ButtonScreen extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    paddingHorizontal: 15,
-    paddingVertical: 7.5,
-  },
-  btn: {
-    marginRight: 15,
-    marginVertical: 7.5,
-  },
-});

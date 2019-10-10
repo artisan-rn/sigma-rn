@@ -29,3 +29,21 @@ ios
 __tests__
 example
 
+.buckconfig
+.eslintrc.js
+.flowconfig
+.gitattributes
+.gitignore
+.npmignore
+.prettierrc.js
+.watchmanconfig
+app.json
+babel.config.js
+index.js
+jest.config.js
+metro.config.js
+
+package-lock.json
+tsconfig.json
+yarn.lock
+

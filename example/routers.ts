@@ -1,5 +1,6 @@
 import ButtonScreen from './Button';
 import SwitchScreen from './Switch';
+import IconScreen from './Icon';
 
 export const routers = [
   {
@@ -13,5 +14,11 @@ export const routers = [
     key: 'Switch',
     group: 'general',
     label: '开关',
+  },
+  {
+    screen: IconScreen,
+    key: 'Icon',
+    group: 'general',
+    label: '图标',
   },
 ];

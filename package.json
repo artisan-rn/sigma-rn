@@ -1,7 +1,7 @@
 {
   "name": "@jdjoy/sigma-rn",
   "description": "rn components ui kit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

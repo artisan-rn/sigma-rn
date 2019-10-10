@@ -9,6 +9,7 @@
     "experimentalDecorators": true,
     "jsx": "react-native",
     "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
     "moduleResolution": "node",
     "strict": false,
     "skipLibCheck": true,
