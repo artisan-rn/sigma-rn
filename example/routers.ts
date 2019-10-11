@@ -1,6 +1,7 @@
 import ButtonScreen from './Button';
 import SwitchScreen from './Switch';
 import IconScreen from './Icon';
+import RadioScreen from './Radio';
 
 export const routers = [
   {
@@ -20,5 +21,11 @@ export const routers = [
     key: 'Icon',
     group: 'general',
     label: '图标',
+  },
+  {
+    screen: RadioScreen,
+    key: 'Radio',
+    group: 'general',
+    label: '单选按钮',
   },
 ];

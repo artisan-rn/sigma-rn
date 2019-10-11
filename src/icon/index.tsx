@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {ART, ViewStyle} from 'react-native';
+import {ART, StyleProp, ViewStyle} from 'react-native';
 
 import ICONS from './Icons.json';
 import {getRpx} from '@jdjoy/sigma-rn-util/lib/Device';
@@ -8,9 +8,9 @@ import {getRpx} from '@jdjoy/sigma-rn-util/lib/Device';
 const {Surface, Shape} = ART;
 interface IconProps {
   type: string;
-  style: ViewStyle;
-  size: number;
-  color: string;
+  style?: StyleProp<ViewStyle>;
+  size?: number;
+  color?: string;
 }
 //
 //* path 代表路径

@@ -5,6 +5,7 @@ import {
   TouchableWithoutFeedback,
   ViewStyle,
   TextStyle,
+  StyleProp,
 } from 'react-native';
 import styles from './style';
 export interface ButtonProps {
@@ -12,8 +13,9 @@ export interface ButtonProps {
   block?: boolean;
   size?: 'lg' | 'md' | 'sm' | 'xs';
   type?: 'primary' | 'ghost' | 'default' | 'fill';
-  style?: ViewStyle;
+  style?: StyleProp<ViewStyle>;
   textStyle?: TextStyle;
+  onPress?: any;
 }
 
 export default class Button extends React.Component<ButtonProps> {
@@ -51,7 +53,7 @@ export default class Button extends React.Component<ButtonProps> {
     ];
 
     return (
-      <TouchableWithoutFeedback {...other}>
+      <TouchableWithoutFeedback disabled={disabled} {...other}>
         <View style={wrapStyle}>
           {typeof children === 'string' ? (
             <Text style={textStyleWrap}>{children}</Text>

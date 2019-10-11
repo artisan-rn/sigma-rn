@@ -16,6 +16,7 @@ const helpColors = {
 };
 
 const disabled = greyColors.neutralGrey;
+const disabledOpacity = 0.3;
 
 const fillColors = {
   fullBase: '#FFFFFF',
@@ -24,13 +25,13 @@ const fillColors = {
 };
 
 const fontSizes = {
-  fontSizeXXS: 20, // 商品属性。标签内容 小型按钮引导跳转等
-  fontSizeXS: 22, // 次要信息、 选项标签按钮等
-  fontSizeS: 24, //次要商品名称、辅助提示类信息、常规按钮
-  fontSizeM: 26, //常规商品名称、正文内容、文字类按钮、Tab导航等
-  fontSizeL: 30, // 商详主商品名称、楼层标题、导航按钮
-  fontSizeXL: 36, //导航标题、登陆按钮、商品价格
-  fontSizeXXL: 60, //商详主商品价格等
+  fontSizeXXS: getRpx(20), // 商品属性。标签内容 小型按钮引导跳转等
+  fontSizeXS: getRpx(22), // 次要信息、 选项标签按钮等
+  fontSizeS: getRpx(24), //次要商品名称、辅助提示类信息、常规按钮
+  fontSizeM: getRpx(26), //常规商品名称、正文内容、文字类按钮、Tab导航等
+  fontSizeL: getRpx(30), // 商详主商品名称、楼层标题、导航按钮
+  fontSizeXL: getRpx(36), //导航标题、登陆按钮、商品价格
+  fontSizeXXL: getRpx(60), //商详主商品价格等
 };
 
 const border = {
@@ -55,6 +56,7 @@ const variables: any = {
   ...greyColors,
   ...helpColors,
   disabled,
+  disabledOpacity,
   ...fillColors,
   ...fontSizes,
   ...border,
