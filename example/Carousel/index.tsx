@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {View, StyleSheet, Text, Dimensions, Image} from 'react-native';
+import {View, StyleSheet, Text, Dimensions, Image, ScrollView} from 'react-native';
 // @ts-ignore
 import {Carousel} from '@jdjoy/sigma-rn';
 import Card from '../Card';
@@ -44,9 +44,6 @@ const entries = [
   },
 ];
 export default class Demo extends React.Component {
-  static navigationOptions = {
-    title: '轮播',
-  };
 
   _renderItem({item, index}) {
     return (
@@ -63,37 +60,43 @@ export default class Demo extends React.Component {
   }
   render() {
     return (
-      <View>
-        <Carousel
-          layout={'default'}
-          data={entries}
-          renderItem={this._renderItem}
-          sliderWidth={sliderWidth}
-          itemWidth={itemWidth}
-          autoplay
-          loop
-        />
-        <Carousel
-          layout={'stack'}
-          layoutCardOffset={18}
-          data={entries}
-          renderItem={this._renderItem}
-          sliderWidth={sliderWidth}
-          itemWidth={itemWidth}
-          autoplay
-          loop
-        />
-        <Carousel
-          layout={'tinder'}
-          layoutCardOffset={9}
-          data={entries}
-          renderItem={this._renderItem}
-          sliderWidth={sliderWidth}
-          itemWidth={itemWidth}
-          autoplay
-          loop
-        />
-      </View>
+      <ScrollView>
+        <Card title="default">
+          <Carousel
+            layout={'default'}
+            data={entries}
+            renderItem={this._renderItem}
+            sliderWidth={sliderWidth}
+            itemWidth={itemWidth}
+            autoplay
+            loop
+          />
+        </Card>
+        <Card title="stack">
+          <Carousel
+            layout={'stack'}
+            layoutCardOffset={18}
+            data={entries}
+            renderItem={this._renderItem}
+            sliderWidth={sliderWidth}
+            itemWidth={itemWidth}
+            autoplay
+            loop
+          />
+        </Card>
+        <Card title="tinder">
+          <Carousel
+            layout={'tinder'}
+            layoutCardOffset={9}
+            data={entries}
+            renderItem={this._renderItem}
+            sliderWidth={sliderWidth}
+            itemWidth={itemWidth}
+            autoplay
+            loop
+          />
+        </Card>
+      </ScrollView>
     );
   }
 }

@@ -5,9 +5,6 @@ import {Switch} from '@jdjoy/sigma-rn';
 import Card from '../Card';
 
 class Demo extends React.PureComponent {
-  static navigationOptions = {
-    title: '开关',
-  };
 
   state = {
     value: false,

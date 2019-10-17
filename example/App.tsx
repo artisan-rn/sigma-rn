@@ -22,24 +22,11 @@ const COLORS = [
   '#CB3A56',
 ];
 
-export default class App extends Component {
-  static navigationOptions = {
-    title: 'JD App 8.0 视觉规范 组件库',
-    headerBackTitle: '返回',
-  };
+interface AppProps {
+  navigation: any;
+}
 
-  state = {
-    modalVisible: false,
-    selectedComponentIndex: -1,
-  };
-
-  onCloseModal = () => {
-    this.setState({
-      modalVisible: false,
-      selectedComponentIndex: -1,
-    });
-  };
-
+export default class App extends Component<AppProps> {
   onPressCard(item) {
     this.props.navigation.navigate(item.key);
   }
@@ -62,14 +49,13 @@ export default class App extends Component {
   };
 
   render() {
-    const {} = this.state;
     return (
       <React.Fragment>
         <FlatList
           numColumns={2}
           data={routers}
           style={styles.list}
-          keyExtractor={(_, idx) => idx}
+          keyExtractor={(_: any, idx: number) => `${idx}`}
           renderItem={this.renderItem}
         />
       </React.Fragment>

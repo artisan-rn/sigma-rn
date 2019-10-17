@@ -6,9 +6,7 @@ import {Radio} from '@jdjoy/sigma-rn';
 import Card from '../Card';
 
 export default class RadioScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Radio 单选按钮',
-  };
+
   state = {
     value: 1,
     value1: 'C',

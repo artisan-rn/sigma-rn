@@ -27,11 +27,10 @@ const styles = StyleSheet.create({
     borderRadius: getRpx(6),
     marginTop: getRpx(28),
     paddingTop: getRpx(20),
-    paddingRight: getRpx(20),
     paddingBottom: getRpx(20),
-    paddingLeft: getRpx(20),
   },
   title: {
+    marginLeft: getRpx(20),
     marginBottom: getRpx(20),
     borderLeftColor: '#4c7cfa',
     borderLeftWidth: getDpx(4),

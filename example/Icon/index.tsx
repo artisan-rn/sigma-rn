@@ -22,9 +22,6 @@ const icons = [
 
 const colorIcons = ['circle', 'close', 'cart', 'top', 'shoot', 'increase'];
 export default class IconScreen extends React.Component {
-  static navigationOptions = {
-    title: 'svg图标',
-  };
 
   render() {
     return (

@@ -7,9 +7,6 @@ import Card from '../Card';
 import {getRpx} from '@jdjoy/sigma-rn-util/lib/Device';
 
 export default class ButtonScreen extends React.Component {
-  static navigationOptions = {
-    title: '按钮',
-  };
   render() {
     return (
       <View>

@@ -6,9 +6,7 @@ import {Checkbox} from '@jdjoy/sigma-rn';
 import Card from '../Card';
 
 export default class CheckboxScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Checkbox 按钮',
-  };
+
   state = {
     value: ['1'],
     value1: ['C'],
