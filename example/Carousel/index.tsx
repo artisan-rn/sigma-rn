@@ -15,44 +15,44 @@ const entries = [
   {
     title: 'Beautiful and dramatic Antelope Canyon',
     subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
-    illustration: 'https://i.imgur.com/UYiroysl.jpg',
+    illustration: require('./UYiroysl.jpg'),
   },
   {
     title: 'Earlier this morning, NYC',
     subtitle: 'Lorem ipsum dolor sit amet',
-    illustration: 'https://i.imgur.com/UPrs1EWl.jpg',
+    illustration: require('./UPrs1EWl.jpg'),
   },
   {
     title: 'White Pocket Sunset',
     subtitle: 'Lorem ipsum dolor sit amet et nuncat ',
-    illustration: 'https://i.imgur.com/MABUbpDl.jpg',
+    illustration: require('./MABUbpDl.jpg'),
   },
   {
     title: 'Acrocorinth, Greece',
     subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
-    illustration: 'https://i.imgur.com/KZsmUi2l.jpg',
+    illustration: require('./KZsmUi2l.jpg'),
   },
   {
     title: 'The lone tree, majestic landscape of New Zealand',
     subtitle: 'Lorem ipsum dolor sit amet',
-    illustration: 'https://i.imgur.com/2nCt3Sbl.jpg',
+    illustration: require('./2nCt3Sbl.jpg'),
   },
   {
     title: 'Middle Earth, Germany',
     subtitle: 'Lorem ipsum dolor sit amet',
-    illustration: 'https://i.imgur.com/lceHsT6l.jpg',
+    illustration: require('./lceHsT6l.jpg'),
   },
 ];
 export default class Demo extends React.Component {
   static navigationOptions = {
-    title: '按钮',
+    title: '轮播',
   };
 
   _renderItem({item, index}) {
     return (
       <View style={styles.slide}>
         <Image
-          source={{uri: item.illustration}}
+          source={item.illustration}
           style={{
             width: getRpx(640),
             height: getRpx(427),
@@ -71,6 +71,7 @@ export default class Demo extends React.Component {
           sliderWidth={sliderWidth}
           itemWidth={itemWidth}
           autoplay
+          loop
         />
         <Carousel
           layout={'stack'}
