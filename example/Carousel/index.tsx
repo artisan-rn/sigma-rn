@@ -1,15 +1,16 @@
 import * as React from 'react';
 
-import {View, StyleSheet, Text, Dimensions, Image, ScrollView} from 'react-native';
+import {Image, ScrollView, StyleSheet, View} from 'react-native';
 // @ts-ignore
 import {Carousel} from '@jdjoy/sigma-rn';
 import Card from '../Card';
-import {getRpx} from '@jdjoy/sigma-rn-util/lib/Device';
-const horizontalMargin = 20;
-const slideWidth = 280;
+import Device, {getRpx} from '@jdjoy/sigma-rn-util/lib/Device';
 
-const sliderWidth = Dimensions.get('window').width;
-const itemWidth = slideWidth + horizontalMargin * 2;
+const horizontalMargin = 20;
+const slideWidth = 640;
+
+const sliderWidth = Device.width;
+const itemWidth = getRpx(slideWidth);
 const itemHeight = getRpx(427);
 const entries = [
   {
@@ -44,7 +45,6 @@ const entries = [
   },
 ];
 export default class Demo extends React.Component {
-
   _renderItem({item, index}) {
     return (
       <View style={styles.slide}>
