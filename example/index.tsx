@@ -8,7 +8,7 @@ const Navigation = createStackNavigator(
     App: {
       screen: App,
       navigationOptions: {
-        title: 'JD App 8.0 视觉规范 组件库',
+        title: 'Sigma React Native',
           headerBackTitle: '返回',
       },
     },
