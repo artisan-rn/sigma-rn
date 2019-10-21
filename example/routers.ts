@@ -4,6 +4,7 @@ import IconScreen from './Icon';
 import RadioScreen from './Radio';
 import CheckboxScreen from './Checkbox';
 import CarouselScreen from './Carousel';
+import InputScreen from './Input';
 
 export const routers = [
   {
@@ -41,5 +42,11 @@ export const routers = [
     key: 'Carousel',
     group: 'general',
     label: '轮播',
+  },
+  {
+    screen: InputScreen,
+    key: 'Input',
+    group: 'general',
+    label: '输入框',
   },
 ];

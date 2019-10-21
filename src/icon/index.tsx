@@ -7,7 +7,19 @@ import {getRpx} from '@jdjoy/sigma-rn-util/lib/Device';
 
 const {Surface, Shape} = ART;
 interface IconProps {
-  type: string;
+  type:
+    | 'circle'
+    | 'close'
+    | 'close_o'
+    | 'check'
+    | 'cart'
+    | 'radio'
+    | 'checkbox'
+    | 'top'
+    | 'shoot'
+    | 'map'
+    | 'reduce'
+    | 'increase';
   style?: StyleProp<ViewStyle>;
   size?: number;
   color?: string;

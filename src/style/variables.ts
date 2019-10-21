@@ -51,6 +51,12 @@ const buttons = {
   buttonXsVSpacing: getRpx(16), //垂直方向padding
 };
 
+const input = {
+  // input组件安全区域 高度
+  inputTextFontSize: getRpx(14),
+  inputAreaHeight: getRpx(60)
+}
+
 const variables: any = {
   brandPrimary,
   ...greyColors,
@@ -61,6 +67,7 @@ const variables: any = {
   ...fontSizes,
   ...border,
   ...buttons,
+  ...input,
 };
 
 export default variables;
