@@ -29,6 +29,16 @@ interface IconProps {
 //* ar 代表 aspect ratio; 宽高比
 //
 
+type SVGType = {
+  d: string;
+  fill?: string;
+};
+
+interface IconSvg {
+  path: SVGType[];
+  ar: number;
+}
+
 const Icon: React.FunctionComponent<IconProps> = (props: IconProps) => {
   const {type, style, size, color} = props;
 
@@ -36,7 +46,7 @@ const Icon: React.FunctionComponent<IconProps> = (props: IconProps) => {
     console.error(`Icon type "${type}" is not existed.`);
     return null;
   }
-  const icon = ICONS[type];
+  const icon = ICONS[type] as IconSvg;
 
   return (
     <Surface style={style} width={icon.ar * size} height={size}>

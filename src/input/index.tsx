@@ -1,20 +1,18 @@
 import React, {Component} from 'react';
 import {
-  View,
-  TextInput,
-  StyleSheet,
-  TouchableOpacity,
   Platform,
+  TextInput,
   TextInputProps,
-  ViewStyle,
   TextStyle,
+  TouchableOpacity,
+  View,
+  ViewStyle,
 } from 'react-native';
 
-import inputStyles from './styles';
+import styles from './styles';
 import variables from '../style/variables';
 import Icon from '../icon';
-
-const styles = StyleSheet.create<any>(inputStyles);
+import {getRpx} from "@jdjoy/sigma-rn-util/lib/Device";
 
 interface InputProps extends TextInputProps {
   textAlign?: string;
@@ -26,7 +24,7 @@ interface InputState {
   isEditing: boolean;
 }
 
-export class Input extends Component<InputProps, InputState> {
+export default class Input extends Component<InputProps, InputState> {
   static defaultProps = {
     onChange: null,
     textAlign: 'left',
@@ -118,6 +116,7 @@ export class Input extends Component<InputProps, InputState> {
         <TextInput
           {...tmpProps}
           style={[styles.inputStyle, this.props.inputStyle]}
+          placeholderTextColor={variables.neutralGrey}
           onChange={() => {
             return;
           }}
@@ -147,6 +146,7 @@ export class Input extends Component<InputProps, InputState> {
           {...tmpProps}
           clearButtonMode="never"
           style={[styles.inputStyle, {flex: 1}, this.props.inputStyle]}
+          placeholderTextColor={variables.neutralGrey}
           onChange={() => {
             return;
           }}
@@ -174,7 +174,7 @@ export class Input extends Component<InputProps, InputState> {
               // console.log('press delete icon')
               this.handleChange('');
             }}>
-            <Icon type={'close'} />
+            <Icon type={'close_o'} size={getRpx(30)} />
           </TouchableOpacity>
         ) : null}
       </View>

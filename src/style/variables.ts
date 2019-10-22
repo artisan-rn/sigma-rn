@@ -53,9 +53,9 @@ const buttons = {
 
 const input = {
   // input组件安全区域 高度
-  inputTextFontSize: getRpx(14),
-  inputAreaHeight: getRpx(60)
-}
+  inputTextFontSize: getRpx(26),
+  inputAreaHeight: getRpx(64),
+};
 
 const variables: any = {
   brandPrimary,
