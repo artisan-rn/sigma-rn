@@ -12,7 +12,7 @@ import {
 import styles from './styles';
 import variables from '../style/variables';
 import Icon from '../icon';
-import {getRpx} from "@jdjoy/sigma-rn-util/lib/Device";
+import {getRpx} from '@jdjoy/sigma-rn-util/lib/Device';
 
 interface InputProps extends TextInputProps {
   textAlign?: string;
@@ -29,7 +29,7 @@ export default class Input extends Component<InputProps, InputState> {
     onChange: null,
     textAlign: 'left',
     placeholder: '请输入',
-    placeholderTextColor: variables.lightGrey,
+    placeholderTextColor: variables.neutralGrey,
     autoFocus: false,
     autoCorrect: true,
     keyboardType: 'default',
@@ -116,7 +116,6 @@ export default class Input extends Component<InputProps, InputState> {
         <TextInput
           {...tmpProps}
           style={[styles.inputStyle, this.props.inputStyle]}
-          placeholderTextColor={variables.neutralGrey}
           onChange={() => {
             return;
           }}
@@ -146,7 +145,6 @@ export default class Input extends Component<InputProps, InputState> {
           {...tmpProps}
           clearButtonMode="never"
           style={[styles.inputStyle, {flex: 1}, this.props.inputStyle]}
-          placeholderTextColor={variables.neutralGrey}
           onChange={() => {
             return;
           }}
