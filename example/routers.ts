@@ -5,6 +5,7 @@ import RadioScreen from './Radio';
 import CheckboxScreen from './Checkbox';
 import CarouselScreen from './Carousel';
 import InputScreen from './Input';
+import ToTopScreen from './ToTop';
 
 export const routers = [
   {
@@ -48,5 +49,11 @@ export const routers = [
     key: 'Input',
     group: 'general',
     label: '输入框',
+  },
+  {
+    screen: ToTopScreen,
+    key: 'ToTop',
+    group: 'general',
+    label: '回到顶部',
   },
 ];

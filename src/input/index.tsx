@@ -120,8 +120,8 @@ export default class Input extends Component<InputProps, InputState> {
             return;
           }}
           onChangeText={this.handleChange}
-          onFocus={this.handleFocus.bind(this)}
-          onBlur={this.handleBlur.bind(this)}
+          onFocus={this.handleFocus}
+          onBlur={this.handleBlur}
         />
       </View>
     );
@@ -169,7 +169,6 @@ export default class Input extends Component<InputProps, InputState> {
         {showDelIcon ? (
           <TouchableOpacity
             onPress={() => {
-              // console.log('press delete icon')
               this.handleChange('');
             }}>
             <Icon type={'close_o'} size={getRpx(30)} />

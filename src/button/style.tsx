@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
   },
   fill: {
     backgroundColor: variables.fillGrey,
+    borderColor: variables.fillGrey,
   },
 
   lgText: {

@@ -44,6 +44,7 @@ class RadioButtonItem extends React.Component<RadioButtonItemProps> {
 const styles = StyleSheet.create({
   buttonStyle: {
     marginRight: getRpx(24),
+    borderWidth: getDpx(2),
   },
   checked: {
     borderWidth: getDpx(2),

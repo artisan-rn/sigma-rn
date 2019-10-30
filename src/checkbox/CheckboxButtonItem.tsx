@@ -41,6 +41,7 @@ class CheckboxButtonItem extends React.Component<CheckboxButtonItemProps> {
 const styles = StyleSheet.create({
   buttonStyle: {
     marginRight: getRpx(24),
+    borderWidth: getDpx(2),
   },
   checked: {
     borderWidth: getDpx(2),
